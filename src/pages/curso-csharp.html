@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLearn — Programação em C#</title>
+
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../styles/components/nav.css">
+    <link rel="stylesheet" href="../styles/pages/curso-detalhe.css">
+</head>
+<body>
+
+    <div class="pagina">
+
+        <header class="cabecalho-interno">
+            <a href="cursos.html" class="link-voltar-interno">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6"/>
+                </svg>
+                Voltar
+            </a>
+            <h1>Programação em C#</h1>
+        </header>
+
+        <main class="pagina-com-nav">
+
+            <section class="secao-modulos" aria-label="Conteúdo do curso">
+
+                <h2 class="secao-titulo-curso">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    </svg>
+                    Conteúdo do Curso
+                </h2>
+
+                <details class="modulo" open>
+                    <summary>
+                        <div class="modulo-header">
+                            <div>
+                                <h3 class="modulo-nome">Fundamentos de C#</h3>
+                                <p class="modulo-progresso">0/1 concluídas</p>
+                            </div>
+                            <span class="modulo-chevron">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </summary>
+
+                    <button type="button" class="aula-item ativa"
+                       data-aula="csharp-sintaxe"
+                       onclick="ativarAula(event, \'csharp-sintaxe\')"
+                       aria-pressed="true">
+                        <span class="radio-aula" aria-hidden="true"></span>
+                        Sintaxe Básica e Tipos de Dados
+                    </button>
+                </details>
+
+                <details class="modulo">
+                    <summary>
+                        <div class="modulo-header">
+                            <div>
+                                <h3 class="modulo-nome">Orientação a Objetos</h3>
+                                <p class="modulo-progresso">0/1 concluídas</p>
+                            </div>
+                            <span class="modulo-chevron">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </summary>
+
+                    <button type="button" class="aula-item"
+                       data-aula="csharp-classes"
+                       onclick="ativarAula(event, \'csharp-classes\')"
+                       aria-pressed="false">
+                        <span class="radio-aula" aria-hidden="true"></span>
+                        Classes e Objetos
+                    </button>
+                </details>
+
+            </section>
+
+            <section 
+                     id="painel-csharp-sintaxe" class="painel-aula">
+                <article class="card-conteudo-aula">
+
+                    <h2 class="conteudo-modulo-label">Sintaxe Básica e Tipos de Dados em C#</h2>
+
+                    <div class="badge-concluida" id="badge-csharp-sintaxe"
+                         style="display: none;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             aria-hidden="true">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Aula concluída
+                    </div>
+
+                    <h3 class="conteudo-aula-titulo">Sintaxe Básica e Tipos de Dados em C#</h3>
+
+                    <h4 class="conteudo-subtitulo">Estrutura de um Programa C#</h4>
+                    <div class="bloco-codigo">
+<code>using System;
+
+namespace MeuPrograma
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Olá, Mundo!");
+        }
+    }
+}</code>
+                    </div>
+
+                    <h4 class="conteudo-subtitulo">Tipos de Dados Primitivos:</h4>
+
+                    <h5 class="heuristica-titulo">Numéricos Inteiros:</h5>
+                    <ul class="conteudo-lista">
+                        <li><code>byte</code>: 0 a 255</li>
+                        <li><code>int</code>: -2.147.483.648 a 2.147.483.647</li>
+                        <li><code>long</code>: números muito grandes</li>
+                    </ul>
+
+                    <h5 class="heuristica-titulo">Numéricos Decimais:</h5>
+                    <ul class="conteudo-lista">
+                        <li><code>float</code>: 7 dígitos de precisão</li>
+                        <li><code>double</code>: 15–16 dígitos de precisão</li>
+                        <li><code>decimal</code>: 28–29 dígitos (use para dinheiro)</li>
+                    </ul>
+
+                    <h5 class="heuristica-titulo">Outros Tipos:</h5>
+                    <ul class="conteudo-lista">
+                        <li><code>bool</code>: true ou false</li>
+                        <li><code>char</code>: caractere único ('A')</li>
+                        <li><code>string</code>: texto ("Olá")</li>
+                    </ul>
+
+                    <!-- Declaração de variáveis -->
+                    <h4 class="conteudo-subtitulo">Declaração de Variáveis:</h4>
+                    <div class="bloco-codigo">
+<code>// Declaração explícita
+int idade = 25;
+string nome = "João";
+bool ativo = true;
+
+// Inferência de tipo
+var preco = 99.90m;      // decimal
+var cidade = "São Paulo"; // string</code>
+                    </div>
+
+                    <!-- Operadores -->
+                    <h4 class="conteudo-subtitulo">Operadores:</h4>
+
+                    <h5 class="heuristica-titulo">Aritméticos:</h5>
+                    <ul class="conteudo-lista">
+                        <li><code>+</code> (soma), <code>-</code> (subtração)</li>
+                        <li><code>*</code> (multiplicação), <code>/</code> (divisão)</li>
+                        <li><code>%</code> (resto da divisão)</li>
+                    </ul>
+
+                    <h5 class="heuristica-titulo">Comparação:</h5>
+                    <ul class="conteudo-lista">
+                        <li><code>==</code> (igual), <code>!=</code> (diferente)</li>
+                        <li><code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></li>
+                    </ul>
+
+                    <h5 class="heuristica-titulo">Lógicos:</h5>
+                    <ul class="conteudo-lista">
+                        <li><code>&amp;&amp;</code> (E), <code>||</code> (OU), <code>!</code> (NÃO)</li>
+                    </ul>
+
+                    <!-- Estruturas de controle -->
+                    <h4 class="conteudo-subtitulo">Estruturas de Controle:</h4>
+                    <div class="bloco-codigo">
+<code>// If-Else
+if (idade >= 18)
+{
+    Console.WriteLine("Maior de idade");
+}
+else
+{
+    Console.WriteLine("Menor de idade");
+}
+
+// Switch
+switch (diaSemana)
+{
+    case 1:
+        Console.WriteLine("Segunda");
+        break;
+    case 2:
+        Console.WriteLine("Terça");
+        break;
+    default:
+        Console.WriteLine("Outro dia");
+        break;
+}</code>
+                    </div>
+
+                    <button type="button" class="btn-concluir"
+                            id="btn-concluir-csharp-sintaxe"
+                            onclick="marcarConcluida('csharp-sintaxe')">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             aria-hidden="true">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Marcar como concluída
+                    </button>
+
+                </article>
+            </section>
+
+            <section style="display: none;"
+                     id="painel-csharp-classes" class="painel-aula">
+                <article class="card-conteudo-aula">
+
+                    <h2 class="conteudo-modulo-label">Classes e Objetos</h2>
+
+                    <div class="badge-concluida" id="badge-csharp-classes"
+                         style="display: none;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             aria-hidden="true">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Aula concluída
+                    </div>
+
+                    <h3 class="conteudo-aula-titulo">Classes e Objetos</h3>
+
+                    <p class="conteudo-texto">
+                        Em C#, uma classe é o molde e o objeto é a instância criada a partir dele.
+                    </p>
+
+                    <h4 class="conteudo-subtitulo">Definindo uma Classe:</h4>
+                    <div class="bloco-codigo">
+<code>public class Pessoa
+{
+    // Propriedades
+    public string Nome { get; set; }
+    public int Idade { get; set; }
+
+    // Construtor
+    public Pessoa(string nome, int idade)
+    {
+        Nome = nome;
+        Idade = idade;
+    }
+
+    // Método
+    public void Apresentar()
+    {
+        Console.WriteLine($"Olá, sou {Nome}, {Idade} anos.");
+    }
+}</code>
+                    </div>
+
+                    <!-- Criando objetos -->
+                    <h4 class="conteudo-subtitulo">Criando Objetos:</h4>
+                    <div class="bloco-codigo">
+<code>// Instanciando um objeto
+Pessoa p1 = new Pessoa("Ana", 30);
+Pessoa p2 = new Pessoa("Carlos", 25);
+
+// Chamando método
+p1.Apresentar(); // Olá, sou Ana, 30 anos.
+p2.Apresentar(); // Olá, sou Carlos, 25 anos.</code>
+                    </div>
+
+                    <h4 class="conteudo-subtitulo">Pilares da OOP:</h4>
+
+                    <div class="heuristica-item">
+                        <h5 class="heuristica-titulo">Encapsulamento</h5>
+                        <ul class="conteudo-lista">
+                            <li>Oculta detalhes internos da classe</li>
+                            <li>Usa <code>public</code>, <code>private</code>, <code>protected</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="heuristica-item">
+                        <h5 class="heuristica-titulo">Herança</h5>
+                        <ul class="conteudo-lista">
+                            <li>Uma classe herda membros de outra</li>
+                            <li>Usa o operador <code>:</code> — ex.: <code>class Aluno : Pessoa</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="heuristica-item">
+                        <h5 class="heuristica-titulo">Polimorfismo</h5>
+                        <ul class="conteudo-lista">
+                            <li>Mesmo método, comportamentos diferentes</li>
+                            <li>Usa <code>virtual</code> e <code>override</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="heuristica-item">
+                        <h5 class="heuristica-titulo">Abstração</h5>
+                        <ul class="conteudo-lista">
+                            <li>Expõe apenas o essencial ao mundo externo</li>
+                            <li>Classes e métodos <code>abstract</code></li>
+                        </ul>
+                    </div>
+
+                    <button type="button" class="btn-concluir"
+                            id="btn-concluir-csharp-classes"
+                            onclick="marcarConcluida('csharp-classes')">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             aria-hidden="true">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Marcar como concluída
+                    </button>
+
+                </article>
+            </section>
+
+        </main>
+
+        <nav class="nav-inferior" aria-label="Menu principal">
+
+            <a href="home.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+                <span>Início</span>
+            </a>
+
+            <a href="cursos.html" class="ativo" aria-current="page">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                </svg>
+                <span>Cursos</span>
+            </a>
+
+            <a href="simulados.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                <span>Simulados</span>
+            </a>
+
+            <a href="perfil.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span>Perfil</span>
+            </a>
+
+        </nav>
+
+        <script src="../scripts/curso-detalhe.js"></script>
+
+    </div>
+
+</body>
+</html>

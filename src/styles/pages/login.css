@@ -1,0 +1,155 @@
+.pagina-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 24px;
+    background-color: var(--fundo);
+}
+
+
+.login-logo {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--azul);
+    margin-bottom: 10px;
+}
+
+.login-titulo {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--texto);
+    margin-bottom: 6px;
+}
+
+.login-subtitulo {
+    font-size: 15px;
+    color: var(--texto-secundario);
+    margin-bottom: 32px;
+}
+
+
+.card-login {
+    background-color: var(--branco);
+    border-radius: 16px;
+    box-shadow: var(--sombra);
+    padding: 28px 24px;
+    width: 100%;
+}
+
+.campo-grupo {
+    margin-bottom: 20px;
+}
+
+.campo-grupo label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--texto);
+    margin-bottom: 8px;
+}
+
+.campo-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1.5px solid var(--borda);
+    border-radius: 10px;
+    padding: 14px 16px;
+    background-color: var(--branco);
+    transition: border-color 0.2s ease;
+}
+
+.campo-input:focus-within {
+    border-color: var(--azul);
+}
+
+.campo-input svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0; 
+    color: var(--texto-secundario);
+}
+
+.campo-input input {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: var(--texto);
+    background: transparent;
+    width: 100%;
+}
+
+.campo-input input::placeholder {
+    color: var(--texto-secundario);
+}
+
+.link-esqueceu {
+    display: inline-block;
+    color: var(--azul);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 24px;
+}
+
+.link-esqueceu:hover {
+    text-decoration: underline;
+}
+
+.btn-entrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--azul);
+    color: var(--branco);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.btn-entrar:hover {
+    background-color: var(--azul-hover);
+}
+
+.login-rodape {
+    text-align: center;
+    font-size: 14px;
+    color: var(--texto-secundario);
+}
+
+.login-rodape a {
+    color: var(--azul);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-rodape a:hover {
+    text-decoration: underline;
+}
+
+
+.link-voltar {
+    position: absolute; 
+    top: 24px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--texto-secundario);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.link-voltar:hover {
+    color: var(--texto);
+}

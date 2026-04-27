@@ -1,0 +1,249 @@
+.card-usuario {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    min-width: 64px; /* não encolhe */
+    background-color: var(--azul-claro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar svg {
+    width: 32px;
+    height: 32px;
+    color: var(--azul);
+}
+
+.usuario-dados {
+    flex: 1;
+}
+
+.usuario-nome {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--texto);
+    margin-bottom: 3px;
+}
+
+.usuario-email {
+    font-size: 13px;
+    color: var(--texto-secundario);
+}
+
+.btn-editar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    margin-left: auto;
+    line-height: 0; 
+}
+
+.btn-editar svg {
+    width: 20px;
+    height: 20px;
+    color: var(--texto-secundario);
+}
+
+.acesso-rapido-titulo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--texto);
+    margin: 0 0 16px;
+}
+
+.acesso-rapido-titulo svg {
+    width: 20px;
+    height: 20px;
+    color: var(--azul);
+}
+
+.btn-acesso {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: opacity 0.2s ease;
+}
+
+.btn-acesso:last-child {
+    margin-bottom: 0;
+}
+
+.btn-acesso:hover {
+    opacity: 0.85;
+}
+
+.btn-acesso-azul {
+    background-color: var(--azul-claro);
+    color: var(--azul);
+}
+
+.btn-acesso-verde {
+    background-color: var(--verde-claro);
+    color: var(--verde);
+}
+
+
+.btn-sair {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background-color: var(--vermelho-claro);
+    color: var(--vermelho);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.btn-sair:hover {
+    opacity: 0.8;
+}
+
+.btn-sair svg {
+    width: 20px;
+    height: 20px;
+}
+
+.edit-usuario-resumo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.edit-usuario-resumo .avatar {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+}
+
+.edit-usuario-resumo .avatar svg {
+    width: 26px;
+    height: 26px;
+}
+
+.edit-campo-grupo {
+    margin-bottom: 16px;
+}
+
+.edit-campo-grupo label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--texto);
+    margin-bottom: 8px;
+}
+
+.edit-campo-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1.5px solid var(--borda);
+    border-radius: 10px;
+    padding: 13px 14px;
+    background-color: var(--branco);
+    transition: border-color 0.2s ease;
+}
+
+.edit-campo-input:focus-within {
+    border-color: var(--azul);
+}
+
+.edit-campo-input svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--texto-secundario);
+}
+
+.edit-campo-input input {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: var(--texto);
+    background: transparent;
+    width: 100%;
+}
+
+.edit-botoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.btn-salvar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    background-color: var(--azul);
+    color: var(--branco);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-salvar:hover {
+    background-color: var(--azul-hover);
+}
+
+.btn-salvar svg {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-cancelar-edit {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    background-color: #F3F4F6;
+    color: var(--texto);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1.5px solid var(--borda);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-cancelar-edit:hover {
+    background-color: var(--borda);
+}
+
+.btn-cancelar-edit svg {
+    width: 18px;
+    height: 18px;
+}

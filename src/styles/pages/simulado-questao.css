@@ -1,0 +1,98 @@
+.tag-categoria {
+    display: inline-block;
+    background-color: var(--azul-claro);
+    color: var(--azul);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px; /* pill shape */
+    margin-bottom: 18px;
+}
+
+
+.questao-texto {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--texto);
+    line-height: 1.45;
+    margin-bottom: 28px;
+}
+
+
+.opcoes-lista {
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+.opcao-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.opcao-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: var(--branco);
+    border: 1.5px solid var(--borda);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--texto);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    user-select: none;
+}
+
+.opcao-label:hover {
+    border-color: #b0bcde;
+}
+
+.radio-custom {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    border-radius: 50%;
+    border: 2px solid var(--borda);
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.opcao-input:checked + .opcao-label {
+    border-color: var(--azul);
+    background-color: var(--azul-claro);
+}
+
+.opcao-input:checked + .opcao-label .radio-custom {
+    border-color: var(--azul);
+    background-color: var(--azul);
+    box-shadow: inset 0 0 0 5px var(--branco);
+}
+
+
+.btn-confirmar {
+    display: block;
+    width: 100%;
+    background-color: #9AAFE8; 
+    color: var(--branco);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 17px;
+    border-radius: 12px;
+    border: none;
+    cursor: default; 
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.area-questao:has(.opcao-input:checked) .btn-confirmar {
+    background-color: var(--azul);
+    cursor: pointer;
+}
+
+.area-questao:has(.opcao-input:checked) .btn-confirmar:hover {
+    background-color: var(--azul-hover);
+}

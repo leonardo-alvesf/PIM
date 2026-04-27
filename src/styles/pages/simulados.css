@@ -1,0 +1,104 @@
+.card-simulado {
+    background-color: var(--branco);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    padding: 32px 24px;
+    text-align: center;
+}
+
+
+.icone-simulado {
+    width: 88px;
+    height: 88px;
+    background-color: var(--azul-claro);
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px; 
+}
+
+.icone-simulado svg {
+    width: 44px;
+    height: 44px;
+    color: var(--azul);
+}
+
+
+.simulado-titulo {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--texto);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.simulado-descricao {
+    font-size: 15px;
+    color: var(--texto-secundario);
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+
+.lista-simulado {
+    list-style: none; 
+    text-align: left; 
+    margin-bottom: 28px;
+}
+
+.lista-simulado li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.numero-item {
+    background-color: var(--azul);
+    color: var(--branco);
+    font-size: 13px;
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-texto strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--texto);
+    margin-bottom: 3px;
+}
+
+.item-texto span {
+    font-size: 14px;
+    color: var(--texto-secundario);
+    line-height: 1.4;
+}
+
+
+.btn-comecar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background-color: var(--azul);
+    color: var(--branco);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-comecar:hover {
+    background-color: var(--azul-hover);
+}
