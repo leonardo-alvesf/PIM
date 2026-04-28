@@ -25,7 +25,7 @@
                     os usuários informados sobre o que está acontecendo?
                 </h2>
 
-                <fieldset style="border: none; padding: 0; margin: 0;">
+                <fieldset id="opcoes-fieldset" style="border: none; padding: 0; margin: 0;">
                     <legend class="sr-only">Escolha uma alternativa</legend>
 
                     <ol class="opcoes-lista">
@@ -38,7 +38,7 @@
                             </label>
                         </li>
 
-                        <li>
+                        <li data-correct="true">
                             <input type="radio" class="opcao-input" id="op2" name="questao" value="2">
                             <label class="opcao-label" for="op2">
                                 <span class="radio-custom" aria-hidden="true"></span>
@@ -65,10 +65,25 @@
                     </ol>
                 </fieldset>
 
+                <div id="feedback-box" class="feedback-box" hidden>
+                    <div class="feedback-cabecalho">
+                        <svg id="feedback-icone" class="feedback-icone" viewBox="0 0 24 24" fill="none"
+                             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        </svg>
+                        <strong id="feedback-titulo" class="feedback-titulo"></strong>
+                    </div>
+                    <p class="feedback-texto">
+                        A heurística 'Visibilidade do status do sistema' estabelece que o
+                        sistema deve sempre manter os usuários informados sobre o
+                        que está acontecendo através de feedback apropriado em
+                        tempo razoável.
+                    </p>
+                </div>
+
                 <button
                     type="button"
                     class="btn-confirmar"
-                    onclick="window.location.href='simulados.html'"
+                    onclick="confirmarResposta()"
                 >
                     Confirmar resposta
                 </button>
@@ -125,6 +140,47 @@
         </nav>
 
     </div>
+
+    <script>
+        function confirmarResposta() {
+            const btn = document.querySelector('.btn-confirmar');
+            const checked = document.querySelector('.opcao-input:checked');
+            if (!checked || btn.classList.contains('btn-confirmar--respondido')) return;
+
+            document.getElementById('opcoes-fieldset').style.pointerEvents = 'none';
+
+            const correctLi = document.querySelector('li[data-correct="true"]');
+            const correctInput = correctLi.querySelector('.opcao-input');
+            const correctLabel = correctLi.querySelector('.opcao-label');
+            const isCorrect = checked === correctInput;
+
+            correctLabel.classList.add('opcao-label--correta');
+            if (!isCorrect) {
+                checked.nextElementSibling.classList.add('opcao-label--errada');
+            }
+
+            const box    = document.getElementById('feedback-box');
+            const titulo = document.getElementById('feedback-titulo');
+            const icone  = document.getElementById('feedback-icone');
+            box.removeAttribute('hidden');
+
+            if (isCorrect) {
+                box.classList.add('feedback-box--correta');
+                titulo.textContent = 'Resposta correta!';
+                icone.style.stroke = 'var(--verde)';
+                icone.innerHTML = '<circle cx="12" cy="12" r="10"/><polyline points="9,12 11,14 15,10"/>';
+            } else {
+                box.classList.add('feedback-box--errada');
+                titulo.textContent = 'Resposta incorreta';
+                icone.style.stroke = 'var(--vermelho)';
+                icone.innerHTML = '<circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>';
+            }
+
+            btn.textContent = 'Próxima questão →';
+            btn.classList.add('btn-confirmar--respondido');
+            btn.onclick = () => window.location.href = 'simulado-questao-2.html';
+        }
+    </script>
 
 </body>
 </html>

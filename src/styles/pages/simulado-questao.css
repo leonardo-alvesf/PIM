@@ -58,6 +58,7 @@
     min-width: 22px;
     border-radius: 50%;
     border: 2px solid var(--borda);
+    position: relative;
     transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -95,4 +96,124 @@
 
 .area-questao:has(.opcao-input:checked) .btn-confirmar:hover {
     background-color: var(--azul-hover);
+}
+
+
+/* ── Estado: resposta confirmada ─────────────────────────────── */
+
+.opcao-label--correta {
+    border-color: var(--verde) !important;
+    background-color: var(--verde-claro) !important;
+    cursor: default;
+}
+
+.opcao-label--correta .radio-custom {
+    border-color: var(--verde) !important;
+    background-color: var(--verde) !important;
+    box-shadow: none !important;
+}
+
+.opcao-label--correta .radio-custom::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 9px;
+    border: 2px solid white;
+    border-top: none;
+    border-left: none;
+    transform: rotate(40deg);
+}
+
+.opcao-label--errada {
+    border-color: var(--vermelho) !important;
+    background-color: var(--vermelho-claro) !important;
+    cursor: default;
+}
+
+.opcao-label--errada .radio-custom {
+    border-color: var(--vermelho) !important;
+    background-color: var(--vermelho) !important;
+    box-shadow: none !important;
+}
+
+.opcao-label--errada .radio-custom::before,
+.opcao-label--errada .radio-custom::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: white;
+    top: 50%;
+    left: 50%;
+}
+
+.opcao-label--errada .radio-custom::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.opcao-label--errada .radio-custom::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+/* ── Caixa de feedback ───────────────────────────────────────── */
+
+.feedback-box {
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    border: 1.5px solid;
+}
+
+.feedback-box--correta {
+    background-color: var(--verde-claro);
+    border-color: var(--verde);
+}
+
+.feedback-box--errada {
+    background-color: var(--vermelho-claro);
+    border-color: var(--vermelho);
+}
+
+.feedback-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.feedback-icone {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.feedback-titulo {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.feedback-box--correta .feedback-titulo {
+    color: var(--verde);
+}
+
+.feedback-box--errada .feedback-titulo {
+    color: var(--vermelho);
+}
+
+.feedback-texto {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--texto);
+}
+
+.btn-confirmar--respondido {
+    background-color: var(--azul) !important;
+    cursor: pointer !important;
+}
+
+.btn-confirmar--respondido:hover {
+    background-color: var(--azul-hover) !important;
 }
