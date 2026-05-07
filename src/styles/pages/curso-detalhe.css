@@ -315,7 +315,134 @@ details.modulo:not([open]) .modulo-chevron {
     font-family: 'Courier New', Courier, monospace;
     font-size: 13px;
     color: #2D3748;
-    white-space: pre;    
+    white-space: pre;
     display: block;
     line-height: 1.7;
+}
+
+.card-conclusao-curso {
+    background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+    border: 2px solid var(--verde);
+    border-radius: var(--raio);
+    padding: 24px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.icone-conclusao {
+    width: 40px;
+    height: 40px;
+    background-color: var(--verde-claro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.icone-conclusao svg {
+    width: 22px;
+    height: 22px;
+    color: var(--verde);
+}
+
+.titulo-conclusao {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--texto);
+    margin: 0;
+}
+
+.descricao-conclusao {
+    font-size: 13px;
+    color: var(--texto-secundario);
+    margin: 4px 0 16px;
+}
+
+.btn-completar-curso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background-color: var(--verde);
+    color: var(--branco);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-completar-curso:hover {
+    background-color: #188659;
+}
+
+.container-desbloquear-curso {
+    background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+    border: 2px solid var(--verde);
+    border-radius: var(--raio);
+    padding: 32px 24px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.icone-desbloquear {
+    width: 64px;
+    height: 64px;
+    background-color: var(--verde);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.icone-desbloquear svg {
+    width: 32px;
+    height: 32px;
+    color: var(--branco);
+}
+
+.titulo-desbloquear {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--verde);
+    margin-bottom: 8px;
+}
+
+.texto-desbloquear {
+    font-size: 14px;
+    color: var(--texto-secundario);
+    margin-bottom: 20px;
+}
+
+.btn-desbloquear-curso {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--verde);
+    color: var(--branco);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-desbloquear-curso:hover {
+    background-color: #188659;
+}
+
+.btn-desbloquear-curso svg {
+    width: 20px;
+    height: 20px;
 }
