@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLearn — Recuperar senha</title>
+
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../styles/pages/login.css">
+</head>
+<body>
+
+    <div class="pagina">
+
+        <main class="pagina-login">
+
+            <!-- Voltar -->
+            <a href="../index.html" class="link-voltar">
+                <!-- Icone voltar -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     width="18" height="18" aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6"/>
+                </svg>
+                Voltar
+            </a>
+
+            <p class="login-logo">TechLearn</p>
+            <h1 class="login-titulo">Recuperar senha</h1>
+            <p class="login-subtitulo">Digite seu e-mail para receber instruções</p>
+
+            <section class="card-login">
+
+                <form action="#" novalidate>
+
+                    <!-- Campo de email -->
+                    <div class="campo-grupo">
+                        <label for="email">E-mail</label>
+                        <div class="campo-input">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <polyline points="2,8 12,14 22,8"/>
+                            </svg>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="seu@email.com"
+                                autocomplete="email"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Botão de enviar -->
+                    <button
+                        type="button"
+                        class="btn-entrar"
+                        onclick="window.location.href='../index.html'"
+                    >
+                        Enviar instruções
+                    </button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

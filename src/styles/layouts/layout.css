@@ -1,0 +1,28 @@
+.cabecalho-pagina {
+    background-color: var(--branco);
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.cabecalho-pagina h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--texto);
+}
+
+.cabecalho-pagina p {
+    font-size: 14px;
+    color: var(--texto-secundario);
+    margin-top: 4px;
+}
+
+.area-conteudo {
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--branco);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    padding: 20px;
+}
